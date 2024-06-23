@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ - NYEBLAKBUNDSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <!--icon atas-->
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta property="og:title" content="NYEBLAKBUNDSS" />
+    <meta property="og:description" content="Frequently Asked Questions about us" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <!--Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Caveat-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!--Rowdies-->
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .rowdies-bold {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .txt-blue{
+            color: #004aad;
+        }
+
+        /* Animasi untuk teks */
+        .fade-in-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Definisi animasi */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            max-width: 600px;
+            margin: 20px auto 20px auto;
+        }
+
+        .card-content {
+            display: none;
+        }
+        
+        .card-header-icon {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .card-header-icon:hover {
+            background-color: whitesmoke;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const moreOptionsButtons = document.querySelectorAll('.card-header-icon');
+            
+            moreOptionsButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const cardContent = this.parentNode.nextElementSibling;
+                    
+                    if (cardContent.style.display === 'none' || cardContent.style.display === '') {
+                        cardContent.style.display = 'block';
+                    } else {
+                        cardContent.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+    </script>    
+
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-halfheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white fade-in-text rowdies-bold">NYEBLAKBUNDSS</h1>
+                <h2 class="subtitle has-text-white txt-blue fade-in-text">Frequently Asked Questions about our products.</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <section class="section">
+                <div class="container">
+                    <h3 class="title is-3 has-text-dark has-text-centered">Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">What is Seblak?</p>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Seblak adalah masakan tradisional Indonesia yang terbuat dari kue beras yang kenyal, kuah kaldu yang gurih, dan campuran sayuran segar, protein, dan beragam bumbu. 
+                                Terkenal dengan cita rasa pedas dan gurihnya yang khas, menjadikannya favorit di kalangan pecinta rempah-rempah.
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">What are the different types of Seblak offered?</p>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Di NYEBLAKBUNDSS, kami menawarkan berbagai pilihan Seblak untuk memenuhi preferensi yang berbeda.
+                                Menu kami meliputi Seblak Klasik, Seblak Spesial dengan tambahan protein, 
+                                Seblak Vegetarian, dan Seblak Ekstra Pedas.
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">How spicy is the Extra Spicy Seblak?</p>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Seblak Ekstra Pedas kami dirancang untuk mereka yang menikmati sensasi pedas di setiap gigitan. 
+                                Itu dibuat dengan campuran rempah-rempah spesial kami yang akan memuaskan bahkan yang paling suka bertualang sekalipun
+                                pecinta rempah-rempah.
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Can I customize the order?</p>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Sangat! Kami menawarkan opsi penyesuaian untuk hidangan Seblak kami. 
+                                Anda dapat memilih tingkat kepedasan yang Anda sukai, menambahkan topping ekstra, 
+                                dan pilih ukuran porsi Anda untuk menyesuaikan pesanan sesuai keinginan Anda.                            
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Is NYEBLAKBUNDSS available for catering?</p>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Ya, kami menawarkan layanan katering untuk semua ukuran acara. 
+                                Baik Anda merencanakan pertemuan kecil atau acara perusahaan besar, 
+                                tim kami akan bekerja sama dengan Anda untuk menciptakan pengalaman bersantap yang berkesan bagi tamu Anda.
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>
+

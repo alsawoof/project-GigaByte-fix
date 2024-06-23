@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - NYEBLAKBUNDSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <!--icon atas-->
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+
+    <meta property="og:title" content="NYEBLAKBUNDSS" />
+    <meta property="og:description" content="Discover more about NYEBLAKBUNDSS" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <!--AOS css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+        });
+    </script>
+    
+    <!--Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Caveat-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!--Rowdies-->
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .rowdies-bold {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .txt-blue{
+            color: #004aad;
+        }
+
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+
+        /* Animasi untuk teks */
+        .fade-in-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Definisi animasi */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-right-text {
+            animation: fadeRight 2s ease-in-out;
+        }
+        @keyframes fadeRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .fade-left-text {
+            animation: fadeLeft 2s ease-in-out;
+        }
+        @keyframes fadeLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-halfheight-with-navbar" style="background-image: url('{{ url_for('static', filename='a.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-white fade-in-text rowdies-bold">NYEBLAKBUNDSS</h1>
+                <h2 class="subtitle has-text-white txt-blue fade-in-text">DISCOVER THE AUTHENTIC TASTE OF SEBLAK</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">About Us</h3>
+                        <p>NYEBLAKBUNDSS adalah tujuan Anda untuk menikmati hidangan Seblak yang otentik. Kami bersemangat untuk menghadirkan cita rasa Indonesia yang sebenarnya kepada pelanggan kami, menggunakan resep tradisional yang diturunkan dari generasi ke generasi.</p>
+                        <p>Komitmen kami terhadap kualitas terlihat jelas dalam setiap hidangan yang kami sajikan. Kami dengan hati-hati memilih bahan-bahan segar untuk memastikan setiap gigitan penuh dengan rasa. Baik Anda pecinta rempah-rempah atau lebih menyukai rasa yang lebih lembut, kami menawarkan pilihan yang sesuai dengan setiap selera.</p>
+                        <p>Di NYEBLAKBUNDSS, kami percaya dalam memberikan layanan yang cepat dan ramah dalam suasana yang ramah. Baik Anda bersantap di tempat atau memesan untuk dibawa pulang, kami berusaha membuat setiap pengalaman menyenangkan.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Mission</h3>
+                        <p>Di NYEBLAKBUNDSS, misi kami sederhana: menyajikan hidangan Seblak yang lezat dan otentik yang menyenangkan pelanggan kami. Kami bertujuan untuk menciptakan pengalaman bersantap yang mengesankan dengan menggabungkan cita rasa tradisional dengan layanan yang luar biasa.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb2.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Vision</h3>
+                        <p>Visi kami di NYEBLAKBUNDSS adalah menjadi tujuan wisata bagi para pecinta Seblak dimanapun. Kami berusaha untuk terus berinovasi dan memperluas menu kami dengan tetap setia pada asal usul kami, memastikan bahwa setiap kunjungan ke NYEBLAKBUNDSS adalah petualangan kuliner.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb3.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NYEBLAKBUNDSS | Authentic Seblak</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <!--icon atas-->
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+
+    <!--AOS css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+        });
+    </script>
+    
+    <!--Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Caveat-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!--Rowdies-->
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <meta property="og:title" content="NYEBLAKBUNDSS" />
+    <meta property="og:description" content="Discover the Authentic Taste of Seblak" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <style>
+        .rowdies-bold {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .txt-blue{
+            color: #004aad;
+        }
+
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+
+        /* Animasi untuk teks */
+        .fade-in-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Definisi animasi */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-right-text {
+            animation: fadeRight 2s ease-in-out;
+        }
+        @keyframes fadeRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .fade-left-text {
+            animation: fadeLeft 2s ease-in-out;
+        }
+        @keyframes fadeLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <section class="hero is-halfheight-with-navbar" style="background-image: url('{{ url_for('static', filename='background.png') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h2 class="subtitle txt-blue fade-in-text">Welcome to </h2>
+                <h1 class="title txt-blue fade-in-text rowdies-bold">NYEBLAKBUNDSS</h1>
+                <h2 class="subtitle txt-blue fade-in-text">DISCOVER THE AUTHENTIC TASTE OF SEBLAK</h2>
+                <a class="button is-link fade-in-text" href="{{ url_for('products') }}">Start Now!</a>
+            </div>
+        </div>
+        <div class="hero-foot" style="margin: 0px 20px 20px 20px;">
+            <div class="columns">
+                <div class="column">
+                    <div class="card" style="margin-top: 0px;">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='pro4.jpeg') }}">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            Seblak Ceker
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 20px;">
+                        <div class="card-image">
+                            <figure class="image is-3by4">
+                                <img src="{{ url_for('static', filename='home-1.jpg') }}" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 5px;">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='pro2.jpeg') }}"
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            Seblak Dumpling
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 30px;">
+                        <div class="card-image">
+                            <figure class="image is-3by4">
+                                <img src="{{ url_for('static', filename='home-2.jpg') }}" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 0px;">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='pro5.jpeg') }}">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            Seblak Cireng
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">What is Seblak?</h3>
+                        <p>Seblak adalah masakan tradisional Indonesia yang terbuat dari kue beras yang kenyal, kuah kaldu yang gurih, dan campuran sayuran segar, protein, dan beragam bumbu. Terkenal dengan cita rasa pedas dan gurihnya yang khas, menjadikannya favorit di kalangan pecinta rempah-rempah.</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb2.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Why Choose NYEBLAKBUNDSS?</h3>
+                        <ul>
+                            <li><strong>Authentic Recipes:</strong> Kami menggunakan resep tradisional yang diwariskan dari generasi ke generasi untuk memastikan bahwa setiap gigitan seblak kami memberikan Anda cita rasa Indonesia yang sesungguhnya.</li>
+                            <li><strong>Quality Ingredients:</strong> Kami menggunakan bahan-bahan segar untuk menyiapkan hidangan kami, memastikan kualitas tertinggi dan rasa terbaik.</li>
+                            <li><strong>Customization:</strong> Pilih tingkat kepedasan Anda dan tambahkan topping favorit Anda untuk membuat semangkuk seblak yang sempurna.</li>
+                            <li><strong>Fast and Friendly Service:</strong> Nikmati pelayanan cepat dan suasana hangat dan ramah setiap kali Anda berkunjung.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Menu</h3>
+                        <p>Explore our diverse menu that caters to all taste preferences:</p>
+                        <ul>
+                            <li><strong>Classic Seblak:</strong> Seblak tradisional dengan lontong yang kenyal, telur, dan kuah kaldu yang kental dan pedas.</li>
+                            <li><strong>Special Seblak:</strong> Ditingkatkan dengan berbagai protein seperti ayam, udang, dan daging sapi.</li>
+                            <li><strong>Vegetarian Seblak:</strong> Dilengkapi dengan sayuran segar dan tahu untuk hidangan sehat.</li>
+                            <li><strong>Extra Spicy Seblak:</strong> Bagi mereka yang menyukai rasa pedas ekstra, ini adalah pengalaman paling pedas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb3.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>

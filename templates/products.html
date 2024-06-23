@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products - NYEBLAKBUNDSS</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+
+    <!-- Bulma CSS -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css'/>
+    
+    <!-- Font Awesome CSS -->
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <!--icon atas-->
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+
+    <!--AOS css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+        });
+    </script>
+    
+    <!--Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Caveat-->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!--Rowdies-->
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="NYEBLAKBUNDSS" />
+    <meta property="og:description" content="List of Product on NYEBLAKBUNDSS site" />
+    <meta property="og:image"
+        content="{{ url_for('static', filename='og-icon.png') }}" />
+
+    <style>
+        .rowdies-bold {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+
+        .roboto-bold {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+          
+        .roboto-black {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        
+        .txt-blue{
+            color: #004aad;
+        }
+
+        /* Efek hover pada gambar */
+        .card:hover .card-image img {
+            transform: scale(1.1); /* Contoh: gambar diperbesar 10% */
+            transition: transform 0.3s ease; /* Efek transisi untuk perubahan */
+        }
+
+        .card-bd {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        /* Animasi untuk teks */
+        .fade-in-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Definisi animasi */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="has-navbar-fixed-top">
+    {% include 'navbar.html' %}
+    
+    <!--
+    <section class="hero is-fullheight-with-navbar" style="background-image: url('{{ url_for('static', filename='probann.png') }}'); background-size: cover; background-position: center;">
+    </section>
+    -->
+
+
+    <section class="hero is-halfheight-with-navbar" style="background-image: url('{{ url_for('static', filename='background.png') }}'); background-size: cover; background-position: center;">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title txt-blue fade-in-text rowdies-bold">NYEBLAKBUNDSS</h1>
+                <h2 class="subtitle txt-blue fade-in-text">DISCOVER THE AUTHENTIC TASTE OF SEBLAK</h2>            
+            </div>
+        </div>
+        <div class="hero-foot" style="margin: 0px 60px 20px 60px;">
+            <div class="columns">
+                <div class="column">
+                    <div class="card" style="margin-top: 20px;">
+                        <div class="card-image">
+                            <figure class="image is-3by4">
+                                <img src="{{ url_for('static', filename='home-1.jpg') }}" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 5px;">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="{{ url_for('static', filename='pro3.jpeg') }}"
+                            </figure>
+                        </div>
+                        <div class="card-content has-text-centered subtitle">
+                            Seblak Mie Sosis
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" style="margin-top: 30px;">
+                        <div class="card-image">
+                            <figure class="image is-3by4">
+                                <img src="{{ url_for('static', filename='home-2.jpg') }}" >
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns txt-blue">
+                <div class="column is-one-quarter">
+                    <div class="card card-bd" style="padding-left: 5px;">
+                        <div class="columns txt-blue">
+                            <div class="column roboto-black is-one-quarter" style="font-size: 22px;">
+                                OUR MENU:
+                            </div>
+                            <div class="column" style="padding-left: 50px;">
+                                <ul>
+                                    <li>CLASSIC SEBLAK</li>
+                                    <li>SPECIAL SEBLAK</li>
+                                    <li>VEGETARIAN SEBLAK</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column" style="border-left: 2px solid #004aad;">
+                    <div class="card card-bd" style="padding-left: 30px;">
+                        <div class="columns txt-blue">
+                            <div class="column roboto-black is-one-quarter" style="font-size: 22px;">
+                                GET DISCOUNT:
+                            </div>
+                            <div class="column" style="font-size: 22px;">
+                                <h1 style="font-size: 45px;" class="title bolder roboto-black txt-blue">
+                                    UP TO 35% OFF
+                                </h1>
+                                (AVAILABLE UNTIL 10 JULY 2024)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <a href="#ourproduct"><div class="card" style="border: 2px solid #004aad; padding: 5px 10px 5px 10px;">
+                        <div class="columns txt-blue">
+                            <div class="column is-one-third roboto-bold" >
+                                PRICE STARTS FROM:
+                            </div>
+                            <div class="column">
+                                <p class="roboto-black" style="font-size: 50px; text-align: end;">16K</p>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+        <hr style="height: 2px; background-color: #004aad;">
+    </section>
+
+
+<!--card-->
+<section class="section" id="ourproduct">
+    <h3 class="title is-3 has-text-centered has-text-dark">Product Description</h3>
+    <div class="columns">
+        <div class="column">
+            <div class="card flip-up aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                    <img
+                    src="{{ url_for('static', filename='pro1.jpeg') }}" alt="Seblak Image"
+                        alt="Placeholder image"
+                    />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img
+                            src="{{ url_for('static', filename='logo2.jpeg') }}" alt="Seblak Image"
+                            alt="Placeholder image"
+                        />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Bola Ikan</p>
+                    </div>
+                    </div>
+            
+                    <div class="content">
+                        seblak bervarian toping bola ikan,bakso,telur
+                        <br/><br>
+                    <p>
+                        <strong>Harga Mulai Dari Rp.16,000</strong>
+                    </p>
+                    </div>
+                </div>
+                </div> 
+        </div>
+        
+        <div class="column">
+            <div class="card flip-up aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                    <img
+                    src="{{ url_for('static', filename='pro2.jpeg') }}" alt="Seblak Image"
+                        alt="Placeholder image"
+                    />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img
+                            src="{{ url_for('static', filename='logo2.jpeg') }}" alt="Seblak Image"
+                            alt="Placeholder image"
+                        />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Dumpling</p>
+                    </div>
+                    </div>
+            
+                    <div class="content">
+                        seblak bervarian dumpling,bakso,telur
+                        <br/><br>
+                    <p>
+                        <strong>Harga Mulai Dari Rp.18,000</strong>
+                    </p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="column">
+            <div class="card flip-up aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                    <img
+                    src="{{ url_for('static', filename='pro3.jpeg') }}" alt="Seblak Image"
+                        alt="Placeholder image"
+                    />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img
+                            src="{{ url_for('static', filename='logo2.jpeg') }}" alt="Seblak Image"
+                            alt="Placeholder image"
+                        />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Sosis</p>
+                    </div>
+                    </div>
+            
+                    <div class="content">
+                        seblak bervarian toping sosis,bakso,telur
+                        <br/><br>
+                    <p>
+                        <strong>Harga Mulai Dari Rp.16,000</strong>
+                    </p>
+                    </div>
+                </div>
+                </div> 
+        </div>
+
+        <div class="column">
+            <div class="card flip-up aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                    <img
+                    src="{{ url_for('static', filename='pro4.jpeg') }}" alt="Seblak Image"
+                        alt="Placeholder image"
+                    />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img
+                            src="{{ url_for('static', filename='logo2.jpeg') }}" alt="Seblak Image"
+                            alt="Placeholder image"
+                        />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Ceker</p>
+                    </div>
+                    </div>
+            
+                    <div class="content">
+                        seblak bervarian toping ceker,bakso,telur
+                        <br/><br>
+                    <p>
+                        <strong>Harga Mulai Dari Rp.16,000</strong>
+                    </p>
+                    </div>
+                </div>
+                </div> 
+        </div>
+
+        <div class="column">
+            <div class="card flip-up aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                    <img
+                    src="{{ url_for('static', filename='pro5.jpeg') }}" alt="Seblak Image"
+                        alt="Placeholder image"
+                    />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img
+                            src="{{ url_for('static', filename='logo2.jpeg') }}" alt="Seblak Image"
+                            alt="Placeholder image"
+                        />
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Cireng</p>
+                    </div>
+                    </div>
+            
+                    <div class="content">
+                        seblak bervarian toping cireng,bakso,telur
+                        <br/><br>
+                    <p>
+                        <strong>Harga Mulai Dari Rp.16,000</strong>
+                    </p>
+                    </div>
+                </div>
+                </div> 
+        </div>
+
+    </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Our Products</h3>
+                        <p>Jelajahi beragam hidangan Seblak kami, masing-masing dibuat dengan hati-hati untuk menghadirkan cita rasa asli Indonesia:</p>
+                        <ul>
+                            <li><strong>Classic Seblak:</strong> Seblak tradisional dengan lontong yang kenyal, telur, dan kuah kaldu yang kental dan pedas.</li>
+                            <li><strong>Special Seblak:</strong> Ditingkatkan dengan berbagai protein seperti ayam, udang, dan daging sapi.</li>
+                            <li><strong>Vegetarian Seblak:</strong> Dilengkapi dengan sayuran segar dan tahu untuk hidangan sehat.</li>
+                            <li><strong>Extra Spicy Seblak:</strong> Bagi mereka yang menyukai rasa pedas ekstra, ini adalah pengalaman paling pedas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb.jpg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <div class="content">
+                        <h3 class="title is-3 has-text-dark">Customization Options</h3>
+                        <p>Di NYEBLAKBUNDSS, kami memahami bahwa setiap orang memiliki kesukaannya masing-masing. Itu sebabnya kami menawarkan berbagai opsi penyesuaian:</p>
+                        <ul>
+                            <li><strong>Spice Level:</strong> Pilih tingkat kepedasan pilihan Anda untuk pengalaman yang dipersonalisasi.</li>
+                            <li><strong>Toppings:</strong> Tambahkan topping favorit Anda, mulai dari ekstra telur hingga tambahan protein.</li>
+                            <li><strong>Portion Size:</strong> Pilih ukuran porsi yang sesuai dengan selera Anda, dari kecil hingga ekstra besar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 fade-left-text aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                                <img src="{{ url_for('static', filename='seb4.jpeg') }}" alt="Seblak Image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    {% include 'footer.html' %}
+</body>
+</html>
+
